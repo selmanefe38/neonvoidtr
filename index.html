@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>NEON VOID — Web</title><link rel="stylesheet" href="style.css"></head>
+<body><main id="app">
+<header><div class="brand">NEON <b>VOID</b></div><div id="netStatus">ÇEVRİMDIŞI</div></header>
+<section id="menu" class="panel">
+<h1>NEON VOID</h1><p class="sub">GALAKSİNİN SINIRINDA HAYATTA KAL</p>
+<input id="playerName" maxlength="12" placeholder="Oyuncu adı" value="PILOT">
+<div class="menuButtons"><button id="soloBtn">TEK OYUNCU</button><button id="createDuel">1v1 DÜELLO ODA KUR</button><button id="createRace">PUAN YARIŞI ODA KUR</button></div>
+<div class="joinrow"><input id="roomInput" maxlength="12" placeholder="neonvoid-xxxxxx"><button id="joinBtn">ODAYA KATIL</button></div>
+<div class="serverrow"><p class="hint">ONLINE: ODA KUR'a basınca bu bilgisayar oda sahibi olur. Arkadaşın oda koduyla bağlanır.</p></div>
+<p class="hint">WASD / Oklar: hareket · SPACE: ateş · B: bomba · P: duraklat</p>
+<p id="menuMsg">Tek oyunculu başla veya oda kur. Oda sahibi oyunu açık tutmalı.</p>
+</section>
+<section id="lobby" class="panel hidden"><h2>ODA <span id="roomCode"></span></h2><p id="lobbyInfo">Rakip bekleniyor...</p><button id="copyRoom">ODA KODUNU KOPYALA</button><button id="leaveLobby" class="secondary">AYRIL</button></section>
+<section id="gameWrap" class="hidden"><div class="hud"><span id="score">SKOR 0</span><span id="wave">DALGA 1</span><span id="hp">CAN 100</span><span id="oppScore">RAKİP —</span></div><canvas id="game" width="960" height="720"></canvas><div class="mobile"><button data-key="left">◀</button><button data-key="fire">ATEŞ</button><button data-key="right">▶</button><button data-key="bomb">BOMBA</button></div><div class="gameFoot"><button id="pauseBtn">DURAKLAT</button><button id="exitBtn">MENÜ</button><span id="gameMsg"></span></div></section>
+</main><script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script><script src="game.js"></script></body></html>
